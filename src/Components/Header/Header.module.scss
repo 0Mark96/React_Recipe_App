@@ -1,0 +1,67 @@
+@import '../../Assets/Styles/_variable';
+
+.header{
+    background-color: $opacity-primary-color;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    // position: absolute;
+
+    height: 55px;
+    width: 100%;
+    padding: 0.5% 1.5% 0.5% 1.5%;
+    img{
+       height: 90%;
+       width: auto;
+    }
+    a{
+        display: inline-flex;
+        align-items: center;
+        h2{
+            margin-right: 5px;
+            display: none;
+        }
+    }
+}
+
+// @small devices
+@media screen and (min-width:576px) {
+    .header > a {
+        h2 {
+        display: inline;
+        text-align: center;
+        }
+        svg{
+            width: 25px;
+            height: auto;
+        }
+    }
+}
+
+// @medium devices
+@media screen and (min-width:768px) {
+    .header{
+        height: 70px;
+    }
+}
+
+// @large devices
+@media screen and (min-width:992px) {
+    .header > a {
+        h2 {
+        margin-right: 10px;
+        }
+    }
+}
+
+// @extra large devices
+@media screen and (min-width:1200px) {
+    .header > img{
+        height: 100%;
+    }
+    .header{
+        padding-right: 5%;
+    }
+}

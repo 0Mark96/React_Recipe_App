@@ -1,0 +1,52 @@
+@import '../../../Assets/Styles/_variable';
+
+.form{
+    display: flex;
+    flex-direction: row;
+    border: 2.5px solid $secondary-color;
+    border-radius: 10px;
+    width: 60%;
+    input{
+        background: transparent;
+        border: none;
+        color:$secondary-color;
+        font-size: 16px;
+        padding-left: 2px;
+        width: 100%;
+        &:focus{
+            outline: none !important;
+        }
+    }
+    button{
+        background: transparent;
+        border: none;
+        padding: 4px;
+        color: $secondary-color;
+        &:active{
+            background-color: $tertiary-color;
+            border-radius: 10px;
+        }
+    }
+}
+
+// @medium devices
+@media screen and (min-width:768px) {
+    .form{
+        width: 45%;
+        height: 60%;
+        input{
+            font-size: 20px;
+        }
+    }
+}
+
+// @large devices
+@media screen and (min-width:992px) {
+    .form{
+        width: 35%;
+        height: 70%;
+        input{
+            font-size: 22px;
+        }
+    }
+}
