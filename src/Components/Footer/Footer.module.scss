@@ -7,13 +7,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
 }    
 .projectInfo{
     width: 90%;
-    margin-top: 30px;
-    h3{
+    margin-top: 70px;
+    h2{
         margin-top: 10px;
         &:first-child{
             margin-top: initial;
@@ -24,15 +22,18 @@
 .socialLinks{
     width: 90%;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     .links{
-        margin-top: 20px;
+        margin-top: 30px;
         display: inline-flex;
         width: 80%;
         justify-content: space-around;
         i{
-            font-size: 25px;
+            font-size: 30px;
+            &:hover{
+                color: $tertiary-color;
+            }
         }
     }
 }
@@ -42,10 +43,7 @@
       
     .socialLinks{
         .links{
-            width: 70%;
-            i{
-                font-size: 28px;
-            }
+            width: 65%;
         }
     }
 }
@@ -55,20 +53,17 @@
    
     .projectInfo{
         width: 85%;
-        margin-top: 50px;
-        h3{
+        h2{
             margin-top: 20px;
         }
     }
         
     .socialLinks{
         width: 85%;
-        margin-top: 50px;
-        margin-bottom: 50px;
         .links{
             margin-top: 35px;
             i{
-                font-size: 32px;
+                font-size: 35px;
             }
         }
     }
@@ -78,12 +73,12 @@
 @media screen and (min-width:992px) {
     .footer{
         flex-direction: row;
-        padding: 40px;
+        padding: 100px;
     }    
     .projectInfo{
-        width: 35%;
+        width: 40%;
         margin-top: 0px;
-        h3{
+        h2{
             margin-top: 20px;
         }
     }
