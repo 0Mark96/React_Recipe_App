@@ -13,7 +13,7 @@ const ProductsList = ()=>{
                    return <div className={styles.productContainer} key={item.id}>
                      <h1>{item.title}</h1>
                      <img src={item.image}></img>
-                    <Link to={id}>single product</Link>
+                     <Link to={id}><h3>Read More</h3></Link>
                    </div>
                      
                     

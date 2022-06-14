@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 3px solid $secondary-color;
 }    
 .projectInfo{
     width: 90%;
@@ -27,10 +28,10 @@
     .links{
         margin-top: 30px;
         display: inline-flex;
-        width: 80%;
+        width: 65%;
         justify-content: space-around;
         i{
-            font-size: 30px;
+            font-size: 35px;
             &:hover{
                 color: $tertiary-color;
             }
@@ -43,7 +44,7 @@
       
     .socialLinks{
         .links{
-            width: 65%;
+            width: 60%;
         }
     }
 }
@@ -61,9 +62,9 @@
     .socialLinks{
         width: 85%;
         .links{
-            margin-top: 35px;
+            margin-top: 50px;
             i{
-                font-size: 35px;
+                font-size: 40px;
             }
         }
     }
@@ -88,7 +89,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
         .links{
-            margin-top: 35px;
+            margin-top: 50px;
         }
     }
 }
