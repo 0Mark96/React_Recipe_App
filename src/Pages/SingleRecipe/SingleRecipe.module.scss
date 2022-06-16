@@ -1,0 +1,57 @@
+@import '../../Assets/Styles/_variable';
+
+.singleRecipeContainer{
+    background-color: $tertiary-color;
+    color: $primary-color;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a{
+        border: 2px solid $primary-color;
+        border-radius: 10px;
+        padding: 3px 20px 0px 20px;
+        margin-top: 20px;
+        width: fit-content;
+        height: fit-content;
+        &:first-of-type{
+           margin-top: 40px;
+        }
+        &:active{
+            background-color: $tertiary-color
+        }
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
+}
+
+.detailsContainer{
+    // border: 2px solid rgb(1, 2, 3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+// @small devices
+@media screen and (min-width:576px) {
+
+}
+
+// @medium devices
+@media screen and (min-width:768px) {
+
+}
+
+// @large devices
+@media screen and (min-width:992px) {
+
+}
+
+// @extra large devices
+@media screen and (min-width:1200px) {
+    .singleRecipeContainer{
+        padding: 60px;
+    }
+}

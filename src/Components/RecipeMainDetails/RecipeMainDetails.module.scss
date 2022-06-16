@@ -1,0 +1,65 @@
+@import '../../Assets/Styles/_variable';
+
+.mainDetailsContainer{
+    // border: 2px solid blue;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+    h1{
+        align-self: center;
+        text-align: center;
+    }
+
+    img{
+        margin-top: 40px;
+        align-self: center;
+        width: 250px;
+        border: 2px solid $secondary-color;
+        border-radius: 15px;
+    }
+    p:first-of-type{
+        margin-top: 30px;
+    }
+
+    .info{
+        margin-top: 40px;
+        h2{
+        font-weight: 500;
+        }
+        h4:first-of-type{
+            margin-top: 10px;
+        }
+    }
+}
+
+
+// @small devices
+@media screen and (min-width:576px) {
+  .mainDetailsContainer{
+      min-width: 0;
+  }
+}
+
+// @medium devices
+@media screen and (min-width:768px) {
+    .mainDetailsContainer{
+        margin: 20px;
+        img{
+            align-self: flex-start;
+            width: 300px;
+        }
+    }
+}
+
+// @large devices
+@media screen and (min-width:992px) {
+    .mainDetailsContainer{
+        margin: 40px;
+    }
+}
+
+// @extra large devices
+@media screen and (min-width:1200px) {
+
+}

@@ -18,8 +18,9 @@ const SearchBook = ()=>{
             const getApi = () => {
                 axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${process.env.REACT_APP_API_KEY}&diet=vegetarian`)
                 .then(res => {
-                  setRecipes(res.data.results)
+                  setRecipes(res.data?.results)
                 })
+                .catch(err => console.log(err))
                 }
         getApi()
         },[query])

@@ -1,0 +1,44 @@
+@import '../../Assets/Styles/_variable';
+
+.ingrOuterContainer{
+    // border: 1px solid red;
+    min-width: 100%;
+    margin-top: 60px;
+    .ingredientsList{
+        margin-top: 40px;
+       li{
+        margin-top:20px;
+        font-size: 20px;
+       }
+    }
+    
+}
+
+
+// @small devices
+@media screen and (min-width:576px) {
+    .ingrOuterContainer{
+          min-width: 0;
+    }
+
+}
+
+// @medium devices
+@media screen and (min-width:768px) {
+    .ingrOuterContainer{
+        margin: 20px;
+    }
+}
+
+// @large devices
+@media screen and (min-width:992px) {
+    .ingrOuterContainer{
+        margin: 40px;
+        margin-top: 150px;
+    }
+}
+
+// @extra large devices
+@media screen and (min-width:1200px) {
+
+}
