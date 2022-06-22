@@ -4,32 +4,37 @@ import { useContext } from "react";
 import { RecipeDataContext } from "../SharedLayout/SharedLayout";
 import styles from './Products.module.scss'
 import imgNotFound from '../../Assets/Img/image-not-found.png'
-import PropTypes from 'prop-types'
+import { loadingProductsContext } from "../SharedLayout/SharedLayout";
 
 const ProductsList = ()=>{
     let data = useContext(RecipeDataContext)
-    if(data.length !== 0) {
-    return (
+    const {loadingProducts}=useContext(loadingProductsContext)
+    
+     return (
+        
         <main className={styles.productsListContainer}>
-            {
+       { loadingProducts ? 
+        <h1>..Loading</h1>
+        : 
+        data.length !== 0 ?
+            
             data.map((item)=>{
                 const id = item.id.toString()
                    return <div className={styles.productContainer} key={item.id}>
                             <h1>{item.title || 'No title'}</h1>
                             <img src={item.image || imgNotFound} alt='recipe image'></img>
-                            <Link to={id}><h3>Read More</h3></Link>
+                            <Link to={`/products/${id}`}><h3>Read More</h3></Link>
                           </div>
-            }) 
-            }
+            })
+            
+             :
+            <h1>Sorry No result found</h1>
+           }
         </main> 
+       
+        
+        
         )
-    }else{
-        return(
-          <div className={styles.noResults}>
-              <h1>Sorry no results found !</h1>
-          </div>
-        )
-    }
 }
 
 

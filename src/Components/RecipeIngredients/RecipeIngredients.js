@@ -9,7 +9,7 @@ const RecipeIngredients = ({ingredients}) => {
             {
                 ingredients ? 
                 ingredients.map((item)=>{
-                    return <li key={item.id.toString()}>{item.original || 'No ingredient found'}</li>     
+                    return <li key={Math.random(item.id)}>{item.original || 'No ingredient found'}</li>     
                 })
                 :
                 'No ingredients found'

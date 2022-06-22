@@ -7,18 +7,21 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import styles from "./SearchRecipe.module.scss";
+import { loadingProductsContext } from "../../../Pages/SharedLayout/SharedLayout";
 
-
-const SearchBook = ()=>{
+const SearchRecipe = ()=>{
     const [input,setInput] = useState('')
     const [query,setQuery] = useState('pasta')
     const {recipes,setRecipes} = useContext(setRecipesContext)
+    const {loadingProducts,setLoadingProducts} = useContext(loadingProductsContext)
+    
     let navigate = useNavigate()
     useEffect(()=>{
             const getApi = () => {
                 axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${process.env.REACT_APP_API_KEY}&diet=vegetarian`)
                 .then(res => {
                   setRecipes(res.data?.results)
+                  setLoadingProducts(false)
                 })
                 .catch(err => console.log(err))
                 }
@@ -41,4 +44,4 @@ const SearchBook = ()=>{
         </form>
     )
 }
-export default SearchBook
+export default SearchRecipe

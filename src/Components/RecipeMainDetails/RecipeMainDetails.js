@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './RecipeMainDetails.module.scss';
 
 const RecipeMainDetails = ({data}) => {
-    console.log(data);
+    
     if(data){
         const {title,image,vegetarian,vegan,glutenFree,dairyFree,readyInMinutes,servings} = data
     

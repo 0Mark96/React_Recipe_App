@@ -7,15 +7,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    a{
+    min-height: 40vh;
+    a,button{
+        background-color: transparent;
         border: 2px solid $primary-color;
         border-radius: 10px;
         padding: 3px 20px 0px 20px;
-        margin-top: 20px;
         width: fit-content;
         height: fit-content;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 20px;
+        color: $primary-color;
         &:first-of-type{
-           margin-top: 40px;
+           margin-top: 35px;
         }
         &:active{
             background-color: $tertiary-color
@@ -24,30 +28,27 @@
             transform: scale(1.1,1.1);
         }
     }
+
 }
 
 .detailsContainer{
-    // border: 2px solid rgb(1, 2, 3);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     
 }
-
-// @small devices
-@media screen and (min-width:576px) {
-
+.modalAlreadyAdd{
+ position: fixed;
+ 
+ background-color: $secondary-color;
+ color: rgb(134, 6, 6);
+ text-align: center;
+ padding: 40px;
+ border-bottom: 4px solid rgb(134, 6, 6);
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
 }
 
-// @medium devices
-@media screen and (min-width:768px) {
-
-}
-
-// @large devices
-@media screen and (min-width:992px) {
-
-}
 
 // @extra large devices
 @media screen and (min-width:1200px) {

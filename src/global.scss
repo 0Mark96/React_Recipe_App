@@ -12,7 +12,7 @@
 // @extra small devices 
 
 body{
-    background-image: url('./Assets/Img/mobile-BG-image.jpg');
+    background-image: url('./Assets/Img/leaves-g5638d58cd_1920.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -77,7 +77,7 @@ font-size: 17px;
 @media screen and (min-width:768px) {
   
     body{
-        background-image: url('./Assets/Img/desktop-BG-image.jpg');
+        // background-image: url('./Assets/Img/desktop-BG-image.jpg');
     }
 
         h1{
