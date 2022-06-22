@@ -7,17 +7,17 @@ import styles from './Products.module.scss';
 
 const ProductsList = ()=>{
     
-    let data = useContext(RecipeDataContext) // recipes data
+    const {recipes,setRecipes} = useContext(RecipeDataContext) // recipes data
     const {loadingProducts}=useContext(loadingProductsContext) // loading while fetch products
-    
+    console.log(recipes);
      return (
      <main className={styles.productsListContainer}>
         { 
         loadingProducts ? 
              <h1>..Loading</h1>
              : 
-             data.length !== 0 ?
-                     data.map((item)=>{
+             recipes.length !== 0 ?
+                     recipes.map((item)=>{
                          return <Card item={item} key={item.id}/>
                      })
                      :

@@ -16,6 +16,7 @@ const SingleRecipe = () => {
     const [loading,setLoading]=useState(true)
     const [favProdAlreadyAdd,setFavProdAlreadyAdd] = useState(false)
    
+    //object for favourite page
     const favData = {
         title:data.title,
         image:data.image,
@@ -47,28 +48,28 @@ const SingleRecipe = () => {
     
     return( 
         
-        
-        <main className={styles.singleRecipeContainer}>
+    <main className={styles.singleRecipeContainer}>
         {favProdAlreadyAdd && <div className={styles.modalAlreadyAdd}><h1>Product already added</h1></div>}
         
         { loading ? 
-        <h1>...Loading</h1>
-        :
-           data.length !== 0 ?
+            <h1>...Loading</h1>
+            :
+            data.length !== 0 ?
             <>
-            <div  className={styles.detailsContainer}>
-              <RecipeMainDetails data={data}/>
-              <RecipeIngredients ingredients = {ingredients}/> 
-              <RecipeInstructions instructions = {instructions}/>
-            </div>
-            <AddFavButton favData={favData} setFavProdAlreadyAdd={setFavProdAlreadyAdd}/>
-            <Link to='/'><h3>Back Home</h3></Link>
+            
+              <div  className={styles.detailsContainer}>
+                <RecipeMainDetails data={data}/>
+                <RecipeIngredients ingredients = {ingredients}/> 
+                <RecipeInstructions instructions = {instructions}/>
+              </div>
+            
+              <AddFavButton favData={favData} setFavProdAlreadyAdd={setFavProdAlreadyAdd}/>
+              <Link to='/'><h3>Back Home</h3></Link>
             </>
             :
             <h1>Sorry result not found</h1>
-            }
-        </main>
-           
+        }
+    </main>      
     )
 }
 

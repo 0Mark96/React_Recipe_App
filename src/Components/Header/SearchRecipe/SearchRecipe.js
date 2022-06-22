@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-import { setRecipesContext } from "../../../Pages/SharedLayout/SharedLayout";
+import { RecipeDataContext} from "../../../Pages/SharedLayout/SharedLayout";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +12,7 @@ import { loadingProductsContext } from "../../../Pages/SharedLayout/SharedLayout
 const SearchRecipe = ()=>{
     const [input,setInput] = useState('')
     const [query,setQuery] = useState('pasta')
-    const {recipes,setRecipes} = useContext(setRecipesContext)
+    const {recipes,setRecipes} = useContext(RecipeDataContext)
     const {loadingProducts,setLoadingProducts} = useContext(loadingProductsContext)
     
     let navigate = useNavigate()
@@ -23,7 +23,10 @@ const SearchRecipe = ()=>{
                   setRecipes(res.data?.results)
                   setLoadingProducts(false)
                 })
-                .catch(err => console.log(err))
+                .catch(err => {
+                    console.log(err)
+                    setLoadingProducts(false)
+                })
                 }
         getApi()
         },[query])
