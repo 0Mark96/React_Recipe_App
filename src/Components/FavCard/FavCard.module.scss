@@ -1,0 +1,29 @@
+@import '../../Assets/Styles/_variable';
+
+.favProductContainer{
+    background-color: $opacity-primary-color;
+    box-shadow: 0px 0px 5px 2px $secondary-color;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 400px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    h1{
+      text-align: center;
+      white-space: nowrap; 
+      width: 90%; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid $secondary-color;
+    }
+}
