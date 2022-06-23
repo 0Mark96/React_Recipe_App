@@ -1,7 +1,0 @@
-non fare vedere l'ultime ricerche delle ricerche, quando vado a cercare in una nuova pagina --- > probabilmente si potrebbe risolvere aggiungendo un loader
-
-
-provare in search recipe a memorizzare durettamente i dati, in setFavProduct dal bottone
-e li memorizzare il vecchio array
-
-setfavproduct nel click del bottone, quindi in searc recipe se il botone contiene i dati allora ritorna quacosa 

@@ -1,3 +1,32 @@
+# Progetto-ReactJs / Veg Recipe App
+
+## About The Project
+
+### Link
+
+- Demo➟ (https://vegrecipe.netlify.app/)
+
+### Description
+<b>Project goals given by Start2Impact:</b>
+
+Here's what the site should include:
+
+• Search bar that allows you to search for all vegetarian recipes.
+
+• Each recipe searched must show at least the title and cover image.
+
+• Clicking on a recipe will take you to a dedicated page, where further information will be shown.
+
+• Simple and easy to use UI and UX.
+
+• Organized and understandable app structure.
+
+• Responsive design.
+
+## Author
+- LinkedIn ➟ [Marco Verardi](https://www.linkedin.com/in/marco-verardi-664555150/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
