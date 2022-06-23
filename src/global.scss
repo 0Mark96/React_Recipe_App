@@ -12,7 +12,7 @@
 // @extra small devices 
 
 body{
-    background-image: url('./Assets/Img/leaves-g5638d58cd_1920.jpg');
+    background-image: url('./Assets/Img/mobile-leaves.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -31,114 +31,72 @@ a{
 
 h1{
  font-weight: 500;
+ font-size: 33px;
 }
 
 h2{
  font-weight: 400;
+ font-size: 30px;
 }
 
 h3{
  font-weight: 400;
+ font-size:27px;
 }
 
 h4{
  font-weight: 400;
- font-size: 20px;
+ font-size: 23px;
 }
 
 p{
 font-size: 17px;
 }
 
-// @small devices
-@media screen and (min-width:576px) {
-       h1{
-         
-        }
-        
-        h2{
-        
-        }
-        
-        h3{
-        
-        }
-        
-        h4{
-        
-        }
-        
-        p{
-        
-        }
-}
-
 // @medium devices
 @media screen and (min-width:768px) {
   
     body{
-        // background-image: url('./Assets/Img/desktop-BG-image.jpg');
+        background-image: url('./Assets/Img/Desktop-leaves.jpg');
     }
 
         h1{
-          font-size:33px;
+          font-size:36px;
         }
         
         h2{
-        font-size: 30px;
+        font-size: 33px;
         }
         
         h3{
-        font-size: 27px;
+        font-size: 30px;
         }
         
         h4{
         font-size: 24px;
         }
         
-        p{
-        
-        }
 }
 
 // @large devices
 @media screen and (min-width:992px) {
        h1{
-         font-size: 36px;    
+         font-size: 39px;    
         }
         
         h2{
-         font-size: 33px;
+         font-size: 36px;
         }
         
         h3{
-         font-size: 30;
+         font-size: 33px;
         }
         
         h4{
-         font-size: 24px;
+         font-size: 27px;
         }
         
         p{
          font-size:20px;
-        }
-}
-
-// @extra large devices
-@media screen and (min-width:1200px) {
-        h1{    
-        }
-        
-        h2{
-        }
-        
-        h3{
-        }
-        
-        h4{
-        }
-        
-        p{
-        
         }
 }

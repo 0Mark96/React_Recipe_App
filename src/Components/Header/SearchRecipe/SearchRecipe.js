@@ -12,9 +12,9 @@ import { loadingProductsContext } from "../../../Pages/SharedLayout/SharedLayout
 const SearchRecipe = ()=>{
     const [input,setInput] = useState('')
     const [query,setQuery] = useState('pasta')
-    const {recipes,setRecipes} = useContext(RecipeDataContext)
-    const {loadingProducts,setLoadingProducts} = useContext(loadingProductsContext)
-    
+    const {setRecipes} = useContext(RecipeDataContext)
+    const {setLoadingProducts} = useContext(loadingProductsContext)
+     
     let navigate = useNavigate()
     useEffect(()=>{
             const getApi = () => {
@@ -42,7 +42,7 @@ const SearchRecipe = ()=>{
         
     return(
         <form onSubmit={handleSubmit} className={styles.form}>
-            <input type='text' onChange={handleChange}/>
+            <input type='text' onChange={handleChange} placeholder='Spinach,egg...'/>
             <button type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} size='xl'/></button>
         </form>
     )

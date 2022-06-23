@@ -9,7 +9,7 @@ const id = item.id.toString()
     <div className={styles.productContainer}>
         <h1>{item.title || 'No title'}</h1>
         <img src={item.image || imgNotFound} alt={item.title} />
-        <Link to={`/products/${id}`}><h3>Read More</h3></Link>
+        <Link to={`/products/${id}`}>Read More</Link>
     </div>
   )
 }

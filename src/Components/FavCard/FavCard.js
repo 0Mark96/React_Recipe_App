@@ -7,8 +7,8 @@ const FavCard = ({item,removeItem}) => {
     <div key={item.id} className={styles.favProductContainer}>
     <h1>{item.title}</h1>
     <img src={item.image} alt={item.title}/>
-    <button onClick={()=>removeItem(item.id)}><h3>Remove</h3></button>
-    <Link to={`/products/${item.id}`}><h3>Read More</h3></Link>
+    <button onClick={()=>removeItem(item.id)}>Remove</button>
+    <Link to={`/products/${item.id}`}>Read More</Link>
   </div>
   )
 }

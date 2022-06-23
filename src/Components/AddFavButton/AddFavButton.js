@@ -15,7 +15,7 @@ const AddFavButton = ({favData,setFavProdAlreadyAdd}) => {
 
   
   return (
-    <button onClick={addToFavourite}><h3>Add to favourite</h3></button>
+    <button onClick={addToFavourite}>Add to favourite</button>
   )
 }
 

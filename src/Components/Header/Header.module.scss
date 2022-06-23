@@ -1,7 +1,6 @@
 @import '../../Assets/Styles/_variable';
 
 .header{
-    background-color: $opacity-primary-color;
 
     display: flex;
     flex-direction: row;
@@ -10,7 +9,11 @@
 
     height: 70px;
     width: 100%;
-    padding: 0.5% 1.5% 0.5% 1.5%;
+    padding: 0.5% 2% 0.5% 2%;
+ 
+    border-bottom: 1px solid $secondary-color;
+
+   
     img{
        height: 90%;
        width: auto;

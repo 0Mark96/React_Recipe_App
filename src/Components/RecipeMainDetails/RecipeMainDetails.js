@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './RecipeMainDetails.module.scss';
-
+import ImgNotFound from '../../Assets/Img/image-not-found.png'
 const RecipeMainDetails = ({data}) => {
     
     if(data){
@@ -9,7 +9,7 @@ const RecipeMainDetails = ({data}) => {
         return (
     <div className={styles.mainDetailsContainer}>
         <h1>{title || 'No title'}</h1>
-        <img src={image}/>
+        <img src={image || ImgNotFound} alt={title}/>
         <p>Cooking Time : <b>{readyInMinutes} min</b></p>
         <p>Servings: <b>{servings}</b></p>
            <div className={styles.info}>

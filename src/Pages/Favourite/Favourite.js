@@ -29,7 +29,7 @@ const Favourite = () => {
                     }
                  </div>
           }
-        <Link to='/'><h3>Back Home</h3></Link>  
+        <Link to='/'>Back Home</Link>  
     </main>
     )
 };

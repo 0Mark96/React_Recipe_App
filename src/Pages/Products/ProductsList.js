@@ -7,9 +7,9 @@ import styles from './Products.module.scss';
 
 const ProductsList = ()=>{
     
-    const {recipes,setRecipes} = useContext(RecipeDataContext) // recipes data
+    const {recipes} = useContext(RecipeDataContext) // recipes data
     const {loadingProducts}=useContext(loadingProductsContext) // loading while fetch products
-    console.log(recipes);
+
      return (
      <main className={styles.productsListContainer}>
         { 

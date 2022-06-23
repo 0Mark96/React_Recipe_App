@@ -22,7 +22,7 @@ const SingleRecipe = () => {
         image:data.image,
         id:data.id
     }
-
+ 
     useEffect(()=>{
     const getInformation = ()=>{
     axios.get(`https://api.spoonacular.com/recipes/${singleRecipeid}/information?apiKey=${process.env.REACT_APP_API_KEY}`)
@@ -38,7 +38,7 @@ const SingleRecipe = () => {
         })
     }
         getInformation() 
-    },[])
+    },[singleRecipeid])
     
     useEffect(()=>{
     setTimeout(()=>{
@@ -64,7 +64,7 @@ const SingleRecipe = () => {
               </div>
             
               <AddFavButton favData={favData} setFavProdAlreadyAdd={setFavProdAlreadyAdd}/>
-              <Link to='/'><h3>Back Home</h3></Link>
+              <Link to='/'>Back Home</Link>
             </>
             :
             <h1>Sorry result not found</h1>

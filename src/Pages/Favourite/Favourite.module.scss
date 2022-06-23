@@ -5,24 +5,24 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     min-height: 40vh;
     padding: 60px 0px 60px 0px;
     a,button{
-            border: 2px solid $secondary-color;
-            border-radius: 10px;
-            background-color: transparent;
-            padding: 3px 20px 0px 20px;
-            color: $secondary-color;
-            font-family: 'Yanone Kaffeesatz', sans-serif;
-            font-size: 20px;
-            &:active{
-                background-color: $tertiary-color
-            }
-            &:hover{
-                transform: scale(1.1,1.1);
-            }
+        border: 2px solid $secondary-color;
+        border-radius: 10px;
+        background-color: transparent;
+        padding: 3px 20px 0px 20px;
+        color: $secondary-color;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 22px;
+        &:active{
+            background-color: $tertiary-color
         }
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
 }
 
 .favProductsListContainer{
