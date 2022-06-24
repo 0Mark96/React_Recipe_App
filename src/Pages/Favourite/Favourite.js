@@ -16,10 +16,10 @@ const Favourite = () => {
   
     return(
     <main className={styles.favouriteSection}>
-        <h1>Favourite Product</h1>
+        <h1>Favourite Recipes</h1>
           {
             favProducts.length === 0 ?
-                 <h1>No favourite products</h1>
+                 <h1>No favourite recipes</h1>
                  :
                  <div  className={styles.favProductsListContainer}> 
                    {
