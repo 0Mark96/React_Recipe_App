@@ -13,11 +13,14 @@
  
     border-bottom: 1px solid $secondary-color;
 
-   
-    img{
-       height: 90%;
-       width: auto;
+    .logoLink{
+        height: 82%;
+        img{
+        height: 100%;
+        width: auto;
     }
+    }
+    
     a{
         display: inline-flex;
         align-items: center;

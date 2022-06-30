@@ -15,7 +15,9 @@ const SingleRecipe = () => {
     const [ingredients,setIngredients] = useState([])
     const [loading,setLoading]=useState(true)
     const [favProdAlreadyAdd,setFavProdAlreadyAdd] = useState(false)
-   
+    const [productCorrectAdd,setProductCorrectAdd] = useState(false)
+
+    
     //object for favourite page
     const favData = {
         title:data.title,
@@ -45,12 +47,20 @@ const SingleRecipe = () => {
         setFavProdAlreadyAdd(false)
     },1000)
     },[favProdAlreadyAdd])
+   
+    useEffect(()=>{
+        setTimeout(()=>{
+            setProductCorrectAdd(false)
+        },1000)
+        },[productCorrectAdd])
     
     return( 
         
     <main className={styles.singleRecipeContainer}>
-        {favProdAlreadyAdd && <div className={styles.modalAlreadyAdd}><h1>Product already added</h1></div>}
-        
+        {favProdAlreadyAdd ? <div className={styles.modalAlreadyAdd}><h1>Product already added</h1></div> : ''}
+        {productCorrectAdd ? <div className={styles.modalCorrectAdd}><h1>Product successfully added</h1></div> : ''}
+
+
         { loading ? 
             <h1>...Loading</h1>
             :
@@ -63,7 +73,7 @@ const SingleRecipe = () => {
                 <RecipeInstructions instructions = {instructions}/>
               </div>
             
-              <AddFavButton favData={favData} setFavProdAlreadyAdd={setFavProdAlreadyAdd}/>
+              <AddFavButton favData={favData} setFavProdAlreadyAdd={setFavProdAlreadyAdd} setProductCorrectAdd={setProductCorrectAdd} />
               <Link to='/'>Back Home</Link>
             </>
             :

@@ -1,15 +1,15 @@
 import { setFavProductsContext } from '../../Pages/SharedLayout/SharedLayout';
 import { useContext } from 'react';
 
-
-const AddFavButton = ({favData,setFavProdAlreadyAdd}) => {
+const AddFavButton = ({favData,setFavProdAlreadyAdd,setProductCorrectAdd}) => {
   const {favProducts,setFavProducts}= useContext(setFavProductsContext)
-
   const addToFavourite = ()=>{
-    favProducts.some(e => e.id === favData.id) ?
-      setFavProdAlreadyAdd(true) 
-    :
-    setFavProducts((oldProduct=>[...oldProduct,favData]))   
+    if(favProducts.some(e => e.id === favData.id)){
+      setFavProdAlreadyAdd(true)
+    }else{
+      setFavProducts((oldProduct=>[...oldProduct,favData])) 
+      setProductCorrectAdd(true)
+    }
   }
   
 

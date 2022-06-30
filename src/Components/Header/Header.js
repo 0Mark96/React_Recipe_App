@@ -12,7 +12,7 @@ const Header = ()=>{
 
     return(
         <header className={styles.header}>
-            <img src={logo} alt='Logo'/>
+            <Link className={styles.logoLink} to='/'><img src={logo} alt='Logo'/></Link>
                <SearchRecipe />
            <Link to='favourite'><h2>Favourite</h2><FontAwesomeIcon icon={faHeartCirclePlus} size='xl' /></Link>
         </header>
