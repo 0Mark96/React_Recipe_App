@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { RecipeDataContext} from "../../../Pages/SharedLayout/SharedLayout";
@@ -8,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import styles from "./SearchRecipe.module.scss";
 import { loadingProductsContext } from "../../../Pages/SharedLayout/SharedLayout";
+import { getSearched } from "../../ApiClient";
 
 const SearchRecipe = ()=>{
     const [input,setInput] = useState('')
@@ -16,19 +16,18 @@ const SearchRecipe = ()=>{
     const {setLoadingProducts} = useContext(loadingProductsContext)
      
     let navigate = useNavigate()
-    useEffect(()=>{
-            const getApi = () => {
-                axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${process.env.REACT_APP_API_KEY}&diet=vegetarian`)
-                .then(res => {
-                  setRecipes(res.data?.results)
-                  setLoadingProducts(false)
-                })
-                .catch(err => {
-                    console.log(err)
-                    setLoadingProducts(false)
-                })
-                }
-        getApi()
+    
+    useEffect(()=>{       
+            const apiCall = getSearched(query);
+		    apiCall.then(res => {
+                setRecipes(res.data.results)
+                setLoadingProducts(false)
+            })
+            .catch(err => {
+                        console.log(err)
+                        setLoadingProducts(false)
+                    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
         },[query])
         
         const handleSubmit = (e) => {

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import AddFavButton from '../../Components/AddFavButton/AddFavButton';
@@ -6,6 +5,7 @@ import RecipeIngredients from '../../Components/RecipeIngredients/RecipeIngredie
 import RecipeInstructions from '../../Components/RecipeInstructions/RecipeInstructions';
 import RecipeMainDetails from '../../Components/RecipeMainDetails/RecipeMainDetails';
 import styles from './SingleRecipe.module.scss';
+import { getInfo } from '../../Components/ApiClient';
 
 const SingleRecipe = () => {
     let {singleRecipeid} = useParams()
@@ -26,9 +26,8 @@ const SingleRecipe = () => {
     }
  
     useEffect(()=>{
-    const getInformation = ()=>{
-    axios.get(`https://api.spoonacular.com/recipes/${singleRecipeid}/information?apiKey=${process.env.REACT_APP_API_KEY}`)
-        .then(res => {
+        const apiCall = getInfo(singleRecipeid);
+        apiCall.then(res => {
             setData(res.data)
             setInstructions(res.data?.analyzedInstructions[0]?.steps)
             setIngredients(res.data?.extendedIngredients) 
@@ -38,8 +37,6 @@ const SingleRecipe = () => {
             console.log(err)
             setLoading(false)
         })
-    }
-        getInformation() 
     },[singleRecipeid])
     
     useEffect(()=>{

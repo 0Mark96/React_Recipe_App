@@ -13,10 +13,10 @@ const Footer = ()=>{
             <div className={styles.socialLinks}>
              <h2>Social Links</h2>
              <div className={styles.links}>
-             <a href="https://www.linkedin.com/in/marco-verardi-664555150/"><i className="fa-brands fa-linkedin-in"></i></a>
-             <a href="https://it-it.facebook.com/marco.verardi.7"><i className="fa-brands fa-facebook-f"></i></a>
-             <a href="https://github.com/0Mark96"><i className="fa-brands fa-github"></i></a>
-             <a href="https://www.instagram.com/marco.verardi/?hl=it"><i className="fa-brands fa-instagram"></i></a>
+             <a href="https://www.linkedin.com/in/marco-verardi-664555150/" target='__blank'><i className="fa-brands fa-linkedin-in"></i></a>
+             <a href="https://it-it.facebook.com/marco.verardi.7" target='__blank'><i className="fa-brands fa-facebook-f"></i></a>
+             <a href="https://github.com/0Mark96" target='__blank'><i className="fa-brands fa-github"></i></a>
+             <a href="https://www.instagram.com/marco.verardi/?hl=it" target='__blank'><i className="fa-brands fa-instagram"></i></a>
             </div>
             </div>
         </footer>

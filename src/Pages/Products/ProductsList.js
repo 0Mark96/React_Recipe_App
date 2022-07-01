@@ -5,11 +5,12 @@ import { loadingProductsContext } from "../SharedLayout/SharedLayout";
 import Card from "../../Components/CardProduct/Card";
 import styles from './Products.module.scss';
 
+
 const ProductsList = ()=>{
     
     const {recipes} = useContext(RecipeDataContext) // recipes data
     const {loadingProducts}=useContext(loadingProductsContext) // loading while fetch products
-
+    
      return (
      <main className={styles.productsListContainer}>
         { 
