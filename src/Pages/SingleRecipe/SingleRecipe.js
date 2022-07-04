@@ -17,7 +17,10 @@ const SingleRecipe = () => {
     const [favProdAlreadyAdd,setFavProdAlreadyAdd] = useState(false)
     const [productCorrectAdd,setProductCorrectAdd] = useState(false)
 
-    
+    useEffect(()=>{
+        window.scrollTo(0,0)
+        },[])
+        
     //object for favourite page
     const favData = {
         title:data.title,

@@ -1,7 +1,6 @@
 @import '../../Assets/Styles/_variable';
 
 .productsListContainer{
-    // background-color: $tertiary-color;
     background-color: $tertiary-color;
     min-height: 40vh;
     padding:60px 30px 60px 30px;
@@ -10,6 +9,16 @@
     grid-gap: 40px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-items: center;
+    .backToTop{
+        position:fixed;
+        bottom:3%;
+        right: 3%;
+        width: 30px;
+        height: auto;
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
 }
 
 
@@ -27,6 +36,9 @@
     .productsListContainer{
         padding:130px ;
         grid-gap:80px;
+        .backToTop{
+            width: 45px;
+        }
     }
 }
 

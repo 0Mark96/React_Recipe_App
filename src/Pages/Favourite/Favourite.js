@@ -1,11 +1,15 @@
 import {Link} from 'react-router-dom'
-import {useContext} from "react";
+import {useContext,useEffect} from "react";
 import { setFavProductsContext } from "../SharedLayout/SharedLayout";
 import styles from './Favourite.module.scss';
 import FavCard from '../../Components/FavCard/FavCard';
 
 const Favourite = () => {
   const {favProducts,setFavProducts} = useContext(setFavProductsContext) // all data of favourite products selected
+ 
+  useEffect(()=>{
+    window.scrollTo(0,0)
+    },[])
 
   //Remove favourite
   const removeItem = (id)=>{
